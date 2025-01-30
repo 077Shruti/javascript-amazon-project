@@ -33,7 +33,7 @@ export function renderPaymentSummary(){
                 <div class="payment-summary-money">
                 ${formateCurrency(shippingPriceCents)}
                 </div>
-            </div>
+            </div> 
 
             <div class="payment-summary-row subtotal-row">
                 <div>Total before tax:</div>
