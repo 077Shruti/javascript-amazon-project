@@ -55,6 +55,17 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
   }
 }
 
+// export function loadCartfetch(){
+//   const Promise=fetch('https://supersimplebackend.dev/cart').then((response)=>{
+//     return response.json();
+
+//   }).then((cartdata)=>{
+//     console.log(cartdata);
+//     fun();
+
+//   });
+// }
+
 export function loadCart(fun){
  const xhr= new XMLHttpRequest();
  xhr.addEventListener('load',()=>{
