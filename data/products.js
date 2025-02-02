@@ -61,6 +61,32 @@ class Clothing extends Product{
 // console.log(date);
 // console.log(date.toLocaleTimeString());
 
+export function loadProductsfetch(){
+  const promise=fetch(
+    'https://supersimplebackend.dev/products'
+    ).then((response)=>{
+    return response.json();
+
+
+  }).then((productsdata)=>{
+    products=productsdata.map((productDetails)=>{
+      if(productDetails.type==Clothing){
+        return new Clothing(productDetails);
+    
+      }
+      return new Product(productDetails);
+    });
+    console.log('load products');
+  });
+  return promise;
+}
+/*
+loadProductsfetch().then(()=>{
+  console.log('next step');
+
+});
+*/
+
 
 export let products=[];
 export function loadProducts(fun){
